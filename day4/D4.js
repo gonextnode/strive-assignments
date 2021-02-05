@@ -31,41 +31,72 @@ Write a function "crazyDiff" that computes the absolute difference between a giv
 It should return triple their absolute difference if the given number is greater than 19.
 */
 
-function crazyDiff(num1, num2) {
+const crazyDiff = (val1, val2) => Math.abs(val1, val2)
 
-}
+console.log(crazyDiff(2, 4))
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
 
-/* WRITE YOUR CODE HERE */
+
+function boundary(n) {
+    if (n <= 100 && n >= 20) {
+        return true
+    } else if (n === 400) {
+        return false
+    }
+}
+
+
+console.log(boundary(25))
+
+
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR CODE HERE */
+//const striveify = (str1) =>
+
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
 
-/* WRITE YOUR CODE HERE */
+const check3and7 = (posNum) => posNum % 7 === 0 || posNum % 3 === 0 ? true : false
+
+console.log(check3and7(4))
+
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+function reverse(str) {
+    return [...str].reverse().join('');
+}
+
+console.log(reverse("Strive"))
+
+
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR CODE HERE */
+function upperFirst(fullString) {
+    const firstLetter = fullString.charAt(0)
+    console.log(`Char at zero is: ${firstLetter}`)
+    const firstLetterUppercase = firstLetter.toUpperCase()
+    const excludedfirstLetter = fullString.slice(1)
+    const capitalizeString = firstLetterUppercase + excludedfirstLetter
+    return capitalizeString
+}
+
+console.log(upperFirst("Strive my day up"))
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
