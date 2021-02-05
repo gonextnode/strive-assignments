@@ -114,6 +114,8 @@ console.log(deleteOne('Wonky text ahead', true))
    Ex.: onlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
 
+// TODO issue with retaining spacing between words after the split (improvements needed)
+
 const onlyLetters = (str) => {
   const res = []
   const splitStr = str.split('')
