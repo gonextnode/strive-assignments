@@ -127,20 +127,21 @@ console.log(onlyLetters('I love 123 whatever'))
 
 // regular expression valid email address
 const reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
+const isEmail = (email) => reg.test(email)
 
-const isEmail = (email) => !!reg.test(email)
-
-// const isThisAnEmail = (email) => {
+// const isEmail = (email) => {
 //   if (reg.test(email)) {
 //     console.log('Success you have signed up with your email address')
 //     return true
+//   } else {
+//     return false
 //   }
 //   console.log('Please enter a valid email!')
 // }
 
 // Assertion and tests
-isEmail('sean@blockprop.io')
-
+const isTrue = isEmail('sean@blockprop.com')
+console.log(isTrue)
 /* Ex.7
    Write the function whatDayIsIt that should return the current day of the week.
 */
