@@ -101,11 +101,7 @@ console.log(splitMe('I love coding'))
     Write the function deleteOne that receives a string and a boolean. If the boolean is true it should return the string without the first letter, otherwise it should remove the last one.
 */
 
-const deleteOne = (str, bool) => {
-  if (bool) {
-    return str.substring(1)
-  }
-}
+const deleteOne = (str, bool) => bool ? str.substring(1) : str.substring(0, str.length - 1)
 
 console.log(deleteOne('Wonky text ahead', true))
 
@@ -117,10 +113,8 @@ console.log(deleteOne('Wonky text ahead', true))
 // TODO issue with retaining spacing between words after the split (improvements needed)
 
 const onlyLetters = (str) => {
-  const res = []
   const splitStr = str.split('')
-  splitStr.forEach(el => isNaN(el) ? res.push(el) : null)
-  return res.join('')
+  return splitStr.filter(el => !parseInt(el)).join('')// use filter instead
 }
 
 console.log(onlyLetters('I love 123 whatever'))
@@ -129,51 +123,45 @@ console.log(onlyLetters('I love 123 whatever'))
    Write the function isThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
+// TODO get help turning into turnery expression, issue returning the bool turnery result
+
 // regular expression valid email address
 const reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
 
-const isThisAnEmail = (email) => {
-  if (reg.test(email)) {
-    console.log('Success you have signed up with your email address')
-    return true
-  }
-  console.log('Please enter a valid email!')
-}
+const isEmail = (email) => !!reg.test(email)
+
+// const isThisAnEmail = (email) => {
+//   if (reg.test(email)) {
+//     console.log('Success you have signed up with your email address')
+//     return true
+//   }
+//   console.log('Please enter a valid email!')
+// }
 
 // Assertion and tests
-isThisAnEmail('sean@blockprop.io')
-isThisAnEmail('failedtest.com')
+isEmail('sean@blockprop.io')
 
 /* Ex.7
    Write the function whatDayIsIt that should return the current day of the week.
 */
 
 const daysInWeek = [
+  'Sunday',
   'Monday',
   'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
-  'Saturday',
-  'Sunday'
+  'Saturday'
 ]
 
-// initialises date time
+// initialises date
 const dt = new Date()
-const numDay = dt.getDay()
+const day = dt.getDay()
 
-// returns the current day of the week
-const whatDayIsIt = () => {
-  let day = ''
-  daysInWeek.forEach((el, i) => {
-    if (++i === numDay) {
-      day = el
-    }
-  })
-  return day
-}
+const whatDayIsIt = () => daysInWeek[day]
 
-// passes test
+// test
 console.log(whatDayIsIt())
 
 /* Ex.8
@@ -212,12 +200,6 @@ console.log(isTodayMyBDay(9))
 /* Ex.11
    Write the function deleteProp that receives an object and a string, and returns the object after deleting the property with that given name.
 */
-
-function deleteProp (obj, str) {
-  obj.map(res => res === str ? { str, ...obj } : null)
-}
-
-deleteProp({ mood: 'top of the world', life: 'living the dream' })
 
 /* Ex.12
     Write the function olderMovie that finds the older movie in the array.
