@@ -55,8 +55,16 @@ changeUrls()
  */
 
 function addToTheSecond (content) {
+  const newItem = document.createElement('li')
 
+  newItem.innerText = 'my appended item'
+  newItem.style.color = 'grey'
+
+  const secondList = document.getElementById('secondList')
+  secondList.appendChild(newItem)
 }
+
+addToTheSecond()
 
 /* EXERCISE 6
 Write a function for adding a second paragraph to the div.
