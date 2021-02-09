@@ -84,8 +84,11 @@ Write a function for making the first UL disappear.
 */
 
 function firstUlDisappear () {
-
+  const list = document.querySelector('ul')
+  list.remove()
 }
+
+firstUlDisappear()
 
 /* EXERCISE 8
 Write a function for making the background of every UL green.
