@@ -12,6 +12,7 @@ Create and array containing the first 5 positive numbers.
 */
 
 const posNums = [2, 3, 5, 5, 6, 7]
+console.log(posNums)
 
 /* EXERCISE 2
 Create an object containing your name, surname, email address and age.
@@ -45,7 +46,7 @@ console.log(myUpdatedObject)
 Create a second object with name, surname, email address and verify that this object has a different email address than the previous one.
 */
 
-secondObject = {
+const secondObject = {
   name: 'Sean',
   surname: 'Knowles',
   emailAddress: 'sean@blockprop.io'
@@ -75,7 +76,7 @@ You are working for the same eCommerce. Today is the black friday and everything
 Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-blackFridayPct = 20
+const blackFridayPct = 20
 
 function discount (shippingCost) {
   const discount = shippingCost.total / 100 * blackFridayPct
@@ -89,22 +90,33 @@ Create an object rapresenting a car with properties like brand, model, licensePl
 After you create the first car, clone it 5 times and change the licensePlate for each cloned car without affecting the original one.
 */
 
-const carList = []
-const numberOfCars = 5
-
-function plateGenerator () {
-  const rand = Math.random().toString().substr(2, 8)  // 60502138
-}
-
 const car = {
   brand: 'audi',
   model: 'A6',
   licensePlate: 60502138
 }
 
-// for (i = 0; i > numberOfCars - 1; i++) {
-//    carList.push(...car, car.licensePlate = plateGenerator)
-// }
+const carList = []
+const numberOfCars = 5 // select number of cars
+
+function plateGenerator () {
+  const rand = Math.random().toString().substr(2, 8) // 60502138
+  return rand
+}
+
+// creates a new car object clone with a freshly generated number plate :)
+const createCar = () => {
+  for (let i = 1; i <= numberOfCars; i++) {
+    const newCar = {
+      ...car,
+      licensePlate: plateGenerator() // generates number plate
+    }
+    carList.push(newCar)
+  }
+}
+
+createCar()
+console.log(carList)
 
 /* EXERCISE 9
 Create a new array called carsForRent containing all the cars from the previous exercise.

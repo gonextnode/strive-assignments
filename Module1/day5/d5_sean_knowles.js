@@ -188,8 +188,6 @@ console.log(date)
    Write the function isTodayMyBDay that returns true if it's your birthday, false otherwise.
 */
 
-const myBirthday = 9
-
 const isTodayMyBDay = (birthday) => dt.getDate === birthday
 
 // Assert false as today is not my birthday (unless its the 9th)
