@@ -29,9 +29,8 @@ Write a function for changing the text of only the p which are children of a div
 */
 
 function changePcontent () {
-  const p = document.querySelectorAll('p')
-  const parent = p[0].parentNode
-  console.log(parent)
+  const p = document.querySelectorAll('div p')
+  p.forEach(res => (res.innerText = 'Respect my G'))
 }
 
 changePcontent()
@@ -41,8 +40,15 @@ Write a function for changing the destination of every link to https://www.googl
 */
 
 function changeUrls () {
-
+  const links = document.querySelectorAll('a')
+  console.log(links)
+  links.forEach(element => {
+    element.text = 'Google'
+    element.href = 'https://www.google.com'
+  })
 }
+
+changeUrls()
 
 /* EXERCISE 5
  Write a function for adding a new item in the second list.
