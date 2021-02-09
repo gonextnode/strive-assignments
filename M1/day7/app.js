@@ -71,8 +71,13 @@ Write a function for adding a second paragraph to the div.
 */
 
 function addParagraph (content) {
-
+  const p = document.createElement('p')
+  p.innerText = 'Exercise 6 completed ;)'
+  const div = document.querySelector('div')
+  div.appendChild(p)
 }
+
+addParagraph()
 
 /* EXERCISE 7
 Write a function for making the first UL disappear.
