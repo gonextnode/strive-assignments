@@ -95,8 +95,11 @@ Write a function for making the background of every UL green.
 */
 
 function paintItGreen () {
-
+  const lists = document.querySelectorAll('ul')
+  lists.forEach(res => (res.style.backgroundColor = 'lightgreen'))
 }
+
+paintItGreen()
 
 /* EXERCISE 9
 Make the heading of the page change color every time the user clicks on it.
