@@ -53,3 +53,23 @@ fieldset {
   padding: 0;
   margin: 0;
 }
+
+h1,
+h2 h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+}
+
+body {
+  background-color: black;
+  background-image: url('./assets/flightclub-darken.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.title {
+  font-size: 5rem;
+}
