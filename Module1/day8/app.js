@@ -8,6 +8,15 @@ console.log('connected...')
           - Append the child to the UL
       */
 
+// gets user form input
+function handleTask() {
+  const value = document.querySelector('input').value
+  const node = document.createElement('LI')
+  const textnode = document.createTextNode(value)
+  node.appendChild(textnode)
+  document.getElementById('taskList').appendChild(node)
+}
+
 /* EXERCISE 6: 
           Create a method "removeLast" which removes the last item from the task list
       */

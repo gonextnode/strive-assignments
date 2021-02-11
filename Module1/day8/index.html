@@ -12,6 +12,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 -->
 <html lang="en">
   <head>
+    <title>Arty Tasky</title>
     <!-- EXERCISE 1:
     Specify the title, the charset (UTF-8) and the viewport of the page.
     -->
@@ -30,44 +31,57 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
     background Create a CSS class for the task list item with a border, a bold
     text and a bigger font size Style every button of the page to be bigger */
     </style>
-
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
-    <h1 class="title">Art</h1>
-    <br />
+    <div class="title-container">
+      <h1 class="title">Arty</h1>
+      <h2 class="subTitle">Tasky</h2>
+    </div>
+    <main class="main-wrapper cicle-container circle">
+      <div class="card">
+        <div class="tasklist-container">
+          <div>
+            <div class="instructions-container">
+              <p>- Welcome to the task list for artistic developers!</p>
+              <p>- Use the text input to record a task...</p>
+            </div>
 
-    <span
-      >You can add any task you like by writing it in the specified field and
-      then press "Add new task"</span
-    ><br /><br />
+            <div class="newtask-container">
+              <input type="text" id="newTask" />
+              <input
+                type="button"
+                value="Add new Task"
+                onclick="handleTask()"
+              />
+            </div>
 
-    <input type="text" id="newTask" />
-    <input type="button" value="Add new Task" onclick="addNewTask()" />
+            <!-- EXERCISE 3
+                                Create a button "Remove Last Task" to trigger the method "removeLast"
+                                -->
 
-    <!-- EXERCISE 3
-        Create a button "Remove Last Task" to trigger the method "removeLast"
-        -->
+            <!-- EXERCISE 4
+                                Create a button "Remove First Task" to trigger the method "removeFirst"
+                                -->
 
-    <!-- EXERCISE 4
-        Create a button "Remove First Task" to trigger the method "removeFirst"
-        -->
+            <div class="list-container">
+              <ul id="taskList"></ul>
+            </div>
 
-    <ul id="myTaskList"></ul>
+            <input type="color" placeholder="Color" id="colorPicker" />
+            <input
+              type="button"
+              value="backgorund"
+              onclick="changeTaskBackgroundColor()"
+            />
 
-    <hr />
+            <input type="button" value="Sort" onclick="bubblesort()" />
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <input type="color" placeholder="Color" id="colorPicker" />
-    <input
-      type="button"
-      value="Change task background"
-      onclick="changeTaskBackgroundColor()"
-    />
-
-    <hr />
-
-    <input type="button" value="Sort" onclick="bubblesort()" />
-
-    <script></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
