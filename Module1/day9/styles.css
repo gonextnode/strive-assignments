@@ -23,6 +23,10 @@ span {
   font-weight: 100;
 }
 
+button:hover {
+  color: rgb(83, 170, 255);
+}
+
 body {
   width: 800px;
   height: 100vh;
