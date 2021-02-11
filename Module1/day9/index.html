@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (avoid randoming 10 3 times for example)
+        - Create a USER BOARD with random 24 numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
+    <title>Grandma's Street Bingo</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/cssReset.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="main">
+      <div class="logo-wrapper">
+        <img src="./assets/bingograndma.gif" />
+        <!-- <img src="./assets/bingogif.gif" /> -->
+      </div>
+      <div class="menu-wrapper">
+        <!-- board controls-->
+        <div class="boardscontrol-container">
+          <button onclick="renderBoard()" class="btn-generateboard">
+            > Generate Boards
+          </button>
+          <input min="1" max="10" class="board-input" type="number" value="1" />
+          <label class="menu-label">Select number of boards</label>
+        </div>
+        <!-- draw controls -->
+        <div class="drawcontrol-container">
+          <button onclick="handleDraw()" class="btn-generateboard">
+            > Draw Number
+          </button>
+          <div class="numbers-container"></div>
+        </div>
+      </div>
+      <!-- board generation area -->
+      <div class="boards-wrapper">
+        <div class="boards-container">
+          <div id="boards" class="boards-column"></div>
+          <div class="drawhistory-container">
+            <h2>Draw History</h2>
+            <span id="drawnumbers"></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-wrapper">
+        <h3>Created with 💓 by SKDEV</h3>
+      </div>
+    </main>
+  </body>
+  <script src="app.js" type="text/javascript"></script>
+</html>

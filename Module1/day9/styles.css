@@ -1,0 +1,113 @@
+h1,
+h2 {
+  margin-bottom: 10px;
+}
+
+label,
+button,
+h1,
+h2,
+h3,
+p {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+.menu-label {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+body {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+
+.logo-wrapper {
+  margin: 0 auto;
+  height: 250px;
+}
+
+.menu-wrapper {
+  padding: 30px;
+  border: solid 0.5px lightblue;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.boardscontrol-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.drawcontrol-container {
+  display: flex;
+  justify-content: row;
+}
+
+.numbers-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#draw-number {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.boards-wrapper {
+  min-height: 500px;
+  padding: 30px;
+  background-image: url('/day9/assets/bingolegends.jfif');
+  background-repeat: repeat-y;
+}
+
+.boards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boards-column {
+  width: 500px;
+}
+
+.drawhistory-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(33, 61, 82, 0.775);
+  padding: 10px;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.board {
+  height: 150px;
+  border: 1px solid rgba(93, 110, 123, 0.775);
+  margin-bottom: 25px;
+  background-color: rgba(33, 61, 82, 0.775);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 25px;
+  background-color: whitesmoke;
+}

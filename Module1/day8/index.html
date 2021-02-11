@@ -56,21 +56,21 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
               <button
                 type="button"
                 value="remove last task"
+                onclick="removeFirstTask()"
+              >
+                x-remove-first
+              </button>
+              <button
+                type="button"
+                value="remove last task"
                 onclick="removeLastTask()"
               >
-                Remove Last
+                x-remove-last
               </button>
 
               <!--EXERCISE 4
                                 Create a button "Remove First Task" to trigger the method "removeFirst"
                                 -->
-              <button
-                type="button"
-                value="remove last task"
-                onclick="removeFirstTask()"
-              >
-                Remove Last
-              </button>
             </div>
 
             <div class="list-container">
