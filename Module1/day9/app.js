@@ -2,7 +2,8 @@
 const state = {
   drawNumbers: [],
   boardsCount: 0,
-  boards: []
+  boards: [],
+  boardNumbers: []
 }
 
 // Generates random numbers between 1 and 75
@@ -11,7 +12,7 @@ const randomNumbers = (max = 75) => {
   return num
 }
 
-// used to generate one board
+// used to generate one boards list data
 const randomNumbersList = () => {
   let numsArray = []
   for (let i = 0; i < 75; i++) {
@@ -20,16 +21,19 @@ const randomNumbersList = () => {
   console.log(numsArray)
 }
 
+// receives input selection number of boards
+// sets state to number of boards
 const numberBoardsSelected = () => {
   const { value } = document.querySelector('input')
   state.boardsCount = value
   console.log(state.boardsCount)
   initBoardsData()
+  handleGenerateBoard()
 }
 
-// initialise multiple boards
+// resets board state from previous selection
+// then sets multiple boards state as array matrix
 const initBoardsData = () => {
-  state.boards = []
   for (let i = 1; i < state.boardsCount; i++) {
     state.boards = [[randomNumbersList()], ...state.boards]
     console.log(state.boards)
@@ -37,29 +41,48 @@ const initBoardsData = () => {
   randomNumbersList()
 }
 
+// drawhistory UI component
 const drawHistoryComponent = () => {
   const node = document.createElement('DIV')
   const textNode = document.createTextNode(state.drawNumbers[0])
   node.appendChild(textNode)
   document.getElementById('drawnumbers').appendChild(node)
-  console.log(textNode)
 }
 
+// TODO issues with square numbers not staying within the confines of the board
+
+// boards UI component
 const boardComponent = () => {
   const board = document.createElement('div')
   board.className = 'board'
   board.setAttribute('id', 'board')
   document.getElementById('boards').appendChild(board)
+  for (let i = 0; i < 75; i++) {
+    const square = document.createElement('div')
+    square.innerText = i + 1
+    document.getElementById('board').appendChild(square)
+    square.className = 'square'
+  }
 }
 
-const handleAddBoard = () => {
-  for (let i = 0; i < numberBoardsSelected(); i++) {
+// menu button game control
+const handleGenerateBoard = () => {
+  state.boardsCount = 1
+  for (let i = 0; i < state.boardsCount; i++) {
     boardComponent()
   }
 }
 
+// menu button game control
 const handleDrawNumber = () => {
-  randomNumbers()
-  drawHistoryComponent()
   state.drawNumbers.unshift(randomNumbers())
+  drawHistoryComponent()
+}
+
+// TODO FIX gracefully remove nodes instead of using location.reload
+// clear state and boards
+const clearBoardsState = () => {
+  window.location.reload()
+  state.boards = []
+  state.boardsCount = 0
 }
