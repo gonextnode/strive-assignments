@@ -43,27 +43,35 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       <div class="card">
         <div class="tasklist-container">
           <div>
-            <div class="instructions-container">
-              <p>- Welcome to the task list for artistic developers!</p>
-              <p>- Use the text input to record a task...</p>
-            </div>
-
             <div class="newtask-container">
               <input type="text" id="newTask" />
-              <input
-                type="button"
-                value="Add new Task"
-                onclick="handleTask()"
-              />
+              <input type="button" value="Add new Task" onclick="newTask()" />
             </div>
 
-            <!-- EXERCISE 3
+            <div class="removetask-container">
+              <!-- EXERCISE 3
                                 Create a button "Remove Last Task" to trigger the method "removeLast"
                                 -->
 
-            <!-- EXERCISE 4
+              <button
+                type="button"
+                value="remove last task"
+                onclick="removeLastTask()"
+              >
+                Remove Last
+              </button>
+
+              <!--EXERCISE 4
                                 Create a button "Remove First Task" to trigger the method "removeFirst"
                                 -->
+              <button
+                type="button"
+                value="remove last task"
+                onclick="removeFirstTask()"
+              >
+                Remove Last
+              </button>
+            </div>
 
             <div class="list-container">
               <ul id="taskList"></ul>

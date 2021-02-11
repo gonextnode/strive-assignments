@@ -2,12 +2,12 @@
     Write a function for changing the title of the document in something else.
 */
 
-function changeTitle () {
+function changeTitle() {
   const newTitle = "Sean's awesome page"
   document.title = newTitle
 }
 
-function changePageTitle () {
+function changePageTitle() {
   const firstHeading = document.querySelector('h1')
   firstHeading.innerText = 'Yo this is my awesome page!'
   console.log(firstHeading)
@@ -17,7 +17,7 @@ function changePageTitle () {
 Write a function for changing the class of the title of the page in "myHeading".
 */
 
-function addClassToTitle () {
+function addClassToTitle() {
   const title = document.querySelector('h1')
   title.className = 'myHeading'
 }
@@ -28,9 +28,9 @@ addClassToTitle()
 Write a function for changing the text of only the p which are children of a div.
 */
 
-function changePcontent () {
+function changePcontent() {
   const p = document.querySelectorAll('div p')
-  p.forEach(res => (res.innerText = 'Respect my G'))
+  p.forEach((res) => (res.innerText = 'Respect my G'))
 }
 
 changePcontent()
@@ -39,10 +39,10 @@ changePcontent()
 Write a function for changing the destination of every link to https://www.google.com
 */
 
-function changeUrls () {
+function changeUrls() {
   const links = document.querySelectorAll('a')
   console.log(links)
-  links.forEach(element => {
+  links.forEach((element) => {
     element.text = 'Google'
     element.href = 'https://www.google.com'
   })
@@ -54,7 +54,7 @@ changeUrls()
  Write a function for adding a new item in the second list.
  */
 
-function addToTheSecond (content) {
+function addToTheSecond(content) {
   const newItem = document.createElement('li')
 
   newItem.innerText = 'my appended item'
@@ -70,7 +70,7 @@ addToTheSecond()
 Write a function for adding a second paragraph to the div.
 */
 
-function addParagraph (content) {
+function addParagraph(content) {
   const p = document.createElement('p')
   p.innerText = 'Exercise 6 completed ;)'
   const div = document.querySelector('div')
@@ -83,7 +83,7 @@ addParagraph()
 Write a function for making the first UL disappear.
 */
 
-function firstUlDisappear () {
+function firstUlDisappear() {
   const list = document.querySelector('ul')
   list.remove()
 }
@@ -94,30 +94,26 @@ firstUlDisappear()
 Write a function for making the background of every UL green.
 */
 
-function paintItGreen () {
+function paintItGreen() {
   const lists = document.querySelectorAll('ul')
-  lists.forEach(res => (res.style.backgroundColor = 'lightgreen'))
+  lists.forEach((res) => (res.style.backgroundColor = 'lightgreen'))
 }
 
 paintItGreen()
 
-/* EXERCISE 9
+/* TODO EXERCISE 9
 Make the heading of the page change color every time the user clicks on it.
 */
 
-function makeItClickable () {
+function makeItClickable() {}
 
-}
-
-/* EXERCISE 10
+/* TODO EXERCISE 10
 Change the footer text with something else when the user clicks on it.
 */
 
-function changeFooterText () {
+function changeFooterText() {}
 
-}
-
-/* EXERCISE 11
+/* TODO EXERCISE 11
 Attach an event listener to the input field in the page for console logging its value just after any keystroke.
 */
 
@@ -125,14 +121,12 @@ Attach an event listener to the input field in the page for console logging its 
 
 // }
 
-/* EXERCISE 12
+/* TODO EXERCISE 12
 Create a new welcome alert message when the page successfully loads.
 */
 
-window.onload = function () {
+window.onload = function () {}
 
-}
-
-/* EXERCISE 13
+/* TODO EXERCISE 13
 Use HTML5 tags to divide the content of the page in a more semantic way.
 */

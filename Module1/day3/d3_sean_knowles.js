@@ -23,7 +23,6 @@ const myOjbect = {
   surname: 'Knowles',
   emailAddress: 's@seanknowles.dev',
   age: 32
-
 }
 
 /* EXERCISE 3
@@ -53,7 +52,9 @@ const secondObject = {
 }
 
 if (secondObject.emailAddress !== myOjbect.emailAddress) {
-  console.log(`first object email ${myOjbect.emailAddress} is not the same as secondObject email ${secondObject.emailAddress}`)
+  console.log(
+    `first object email ${myOjbect.emailAddress} is not the same as secondObject email ${secondObject.emailAddress}`
+  )
 }
 
 /* EXERCISE 6
@@ -67,7 +68,7 @@ const totalShippingCart = {
   currency: 'USD'
 }
 
-const shippingCost = totalShippingCart.total >= 50.00 ? 'FREE' : 10.00
+const shippingCost = totalShippingCart.total >= 50.0 ? 'FREE' : 10.0
 
 console.log(`Your current shipping cost is: ${shippingCost}`)
 
@@ -78,12 +79,16 @@ Modify the previous answer inserting this information and, applying the same rul
 
 const blackFridayPct = 20
 
-function discount (shippingCost) {
-  const discount = shippingCost.total / 100 * blackFridayPct
+function discount(shippingCost) {
+  const discount = (shippingCost.total / 100) * blackFridayPct
   return totalShippingCart.total - discount
 }
 
-console.log(`Congrats! It's Black Friday, you recieve ${blackFridayPct}% discount, thie shipping total is: ${discount(totalShippingCart).toFixed(2)}`)
+console.log(
+  `Congrats! It's Black Friday, you recieve ${blackFridayPct}% discount, thie shipping total is: ${discount(
+    totalShippingCart
+  ).toFixed(2)}`
+)
 
 /* EXERCISE 8
 Create an object rapresenting a car with properties like brand, model, licensePlate.
@@ -99,7 +104,7 @@ const car = {
 const carList = []
 const numberOfCars = 5 // select number of cars
 
-function plateGenerator () {
+function plateGenerator() {
   const rand = Math.random().toString().substr(2, 8) // 60502138
   return rand
 }
@@ -118,32 +123,32 @@ const createCar = () => {
 createCar()
 console.log(carList)
 
-/* EXERCISE 9
+/* TODO EXERCISE 9
 Create a new array called carsForRent containing all the cars from the previous exercise.
 */
 
 /* WRITE YOUR CODE HERE */
 
-/* EXERCISE 10
+/* TODO EXERCISE 10
 Remove the first and the last car from the carsForRent array.
 */
 
 /* WRITE YOUR CODE HERE */
 
-/* EXERCISE 11
+/* TODO EXERCISE 11
 Print in the console the TYPES of a car, of the licensePlate and of the brand properties.
 */
 
 /* WRITE YOUR CODE HERE */
 
-/* EXERCISE 12
+/* TODO EXERCISE 12
 Create a new array called carsForSale and insert 3 cars in it.
 Store in a variable totalCars the number of cars present in both carsForSale and carsForRent arrays.
 */
 
 /* WRITE YOUR CODE HERE */
 
-/* EXERCISE 13
+/* TODO EXERCISE 13
 Print in the console the data from each car in the carsForSale array.
 */
 

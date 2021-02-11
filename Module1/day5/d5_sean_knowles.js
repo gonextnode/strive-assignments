@@ -15,7 +15,8 @@
    Create a variable test that contains a string.
 */
 
-const test = 'I am the awesome string you asked for, strings are arrays of charactors'
+const test =
+  'I am the awesome string you asked for, strings are arrays of charactors'
 
 console.log(test)
 
@@ -59,7 +60,21 @@ console.log(me2)
    Programmatically add to the object me an array "skills" that contains the programming languages that you know.
 */
 
-me = { ...me, skills: ['Golang', 'ES6', 'VanillaJS', 'CSS & Sass', 'CssFlexbox', 'CssGrid', 'Nextjs', 'React16+', 'StyledComponents', 'GatsbyJS'] }
+me = {
+  ...me,
+  skills: [
+    'Golang',
+    'ES6',
+    'VanillaJS',
+    'CSS & Sass',
+    'CssFlexbox',
+    'CssGrid',
+    'Nextjs',
+    'React16+',
+    'StyledComponents',
+    'GatsbyJS'
+  ]
+}
 
 console.log(me)
 
@@ -84,7 +99,7 @@ console.log(dice())
     Write the function whoIsBigger that receives 2 numbers and returns the bigger of the two.
 */
 
-const whoIsBigger = (a, b) => a < b ? b : a
+const whoIsBigger = (a, b) => (a < b ? b : a)
 
 console.log(whoIsBigger(30, 20))
 
@@ -101,7 +116,8 @@ console.log(splitMe('I love coding'))
     Write the function deleteOne that receives a string and a boolean. If the boolean is true it should return the string without the first letter, otherwise it should remove the last one.
 */
 
-const deleteOne = (str, bool) => bool ? str.substring(1) : str.substring(0, str.length - 1)
+const deleteOne = (str, bool) =>
+  bool ? str.substring(1) : str.substring(0, str.length - 1)
 
 console.log(deleteOne('Wonky text ahead', true))
 
@@ -110,11 +126,9 @@ console.log(deleteOne('Wonky text ahead', true))
    Ex.: onlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
 
-// TODO issue with retaining spacing between words after the split (improvements needed)
-
 const onlyLetters = (str) => {
   const splitStr = str.split('')
-  return splitStr.filter(el => !parseInt(el)).join('')// use filter instead
+  return splitStr.filter((el) => !parseInt(el)).join('') // use filter instead
 }
 
 console.log(onlyLetters('I love 123 whatever'))
@@ -122,8 +136,6 @@ console.log(onlyLetters('I love 123 whatever'))
 /* Ex.6
    Write the function isThisAnEmail that receives a string and returns true if the string is a valid email.
 */
-
-// TODO get help turning into turnery expression, issue returning the bool turnery result
 
 // regular expression valid email address
 const reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
@@ -174,17 +186,15 @@ console.log(whatDayIsIt())
     }
 */
 
-/* Ex.9
+/* TODO Ex.9
    Write the function howManyDays that receives a date and returns the number of days that has passed since that day.
 */
-
-// TODO NOT FINISHED
 
 const date = dt.getDate()
 
 console.log(date)
 
-/* Ex.10
+/* TODO Ex.10
    Write the function isTodayMyBDay that returns true if it's your birthday, false otherwise.
 */
 
@@ -196,49 +206,49 @@ console.log(isTodayMyBDay(9))
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file!
 
-/* Ex.11
+/* TODO Ex.11
    Write the function deleteProp that receives an object and a string, and returns the object after deleting the property with that given name.
 */
 
-/* Ex.12
+/* TODO Ex.12
     Write the function olderMovie that finds the older movie in the array.
 */
 
-/* Ex.13
+/* TODO Ex.13
     Write the function countMovies that returns the number of movies into the array.
 */
 
-/* Ex.14
+/* TODO Ex.14
     Write the function onlyTitles that creates an array with only the titles of the movies.
 */
 
-/* Ex.15
+/* TODO Ex.15
    Write the function onlyThisMillennium that returns only the movies produced in this millennium.
 */
 
-/* Ex.16
+/* TODO Ex.16
     Write the function getMovieById that receives an id and returns the movie with the given id.
 */
 
-/* Ex.17
+/* TODO Ex.17
     Write the function sumYears that returns the sum of the years the movie has been produced.
 */
 
-/* Ex.18
+/* TODO Ex.18
     Write the function searchMovie that receives a string and returns all the movies with that string in the title.
 */
 
-/* Ex.19
+/* TODO Ex.19
     Write the function searchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the given string in the title, and another array "nonMatch" with all the other movies.
 */
 
-/* Ex.20
+/* TODO Ex.20
    Write the function deleteX that receives a number and returns an array without the element in the given position.
 */
 
 // [EXTRAS] JS Advanced
 
-/* Ex.21
+/* TODO Ex.21
   Create a function halfTree that recives the height creates an "*" half tree with that height.
   Example:
   halfTree(3)
@@ -247,7 +257,7 @@ console.log(isTodayMyBDay(9))
   ***
 */
 
-/* Ex.22
+/* TODO Ex.22
   Create a function tree that receives the height and creates an "*" tree with that height.
   Example:
   tree(3)
@@ -256,7 +266,7 @@ console.log(isTodayMyBDay(9))
   *****
 */
 
-/* Ex.23
+/* TODO Ex.23
   Create a function isItPrime that receives a number and returns true if the number is a prime number.
 */
 
@@ -268,7 +278,7 @@ const movies = [
     imdbID: 'tt0120737',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg'
   },
   {
     Title: 'The Lord of the Rings: The Return of the King',
@@ -276,7 +286,7 @@ const movies = [
     imdbID: 'tt0167260',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
   },
   {
     Title: 'The Lord of the Rings: The Two Towers',
@@ -284,7 +294,7 @@ const movies = [
     imdbID: 'tt0167261',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
   },
   {
     Title: 'Lord of War',
@@ -292,7 +302,7 @@ const movies = [
     imdbID: 'tt0399295',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'
   },
   {
     Title: 'Lords of Dogtown',
@@ -300,7 +310,7 @@ const movies = [
     imdbID: 'tt0355702',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg'
   },
   {
     Title: 'The Lord of the Rings',
@@ -308,7 +318,7 @@ const movies = [
     imdbID: 'tt0077869',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
   },
   {
     Title: 'Lord of the Flies',
@@ -316,7 +326,7 @@ const movies = [
     imdbID: 'tt0100054',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg'
   },
   {
     Title: 'The Lords of Salem',
@@ -324,7 +334,7 @@ const movies = [
     imdbID: 'tt1731697',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg'
   },
   {
     Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
@@ -332,7 +342,7 @@ const movies = [
     imdbID: 'tt0087365',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg'
   },
   {
     Title: 'Lord of the Flies',
@@ -340,7 +350,7 @@ const movies = [
     imdbID: 'tt0057261',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg'
   },
   {
     Title: 'The Avengers',
@@ -348,7 +358,7 @@ const movies = [
     imdbID: 'tt0848228',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
   },
   {
     Title: 'Avengers: Infinity War',
@@ -356,7 +366,7 @@ const movies = [
     imdbID: 'tt4154756',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg'
   },
   {
     Title: 'Avengers: Age of Ultron',
@@ -364,7 +374,7 @@ const movies = [
     imdbID: 'tt2395427',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg'
   },
   {
     Title: 'Avengers: Endgame',
@@ -372,6 +382,6 @@ const movies = [
     imdbID: 'tt4154796',
     Type: 'movie',
     Poster:
-        'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg'
+      'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg'
   }
 ]
