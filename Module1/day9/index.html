@@ -32,15 +32,23 @@
       <div class="menu-wrapper">
         <!-- board controls-->
         <div class="boardscontrol-container">
-          <button onclick="renderBoard()" class="btn-generateboard">
+          <button onclick="handleAddBoard()" class="btn-generateboard">
             > Generate Boards
           </button>
-          <input min="1" max="10" class="board-input" type="number" value="1" />
+          <input
+            onclick="numberBoardsSelected()"
+            min="1"
+            max="10"
+            id="board-input"
+            class="board-input"
+            type="number"
+            value="1"
+          />
           <label class="menu-label">Select number of boards</label>
         </div>
         <!-- draw controls -->
         <div class="drawcontrol-container">
-          <button onclick="handleDraw()" class="btn-generateboard">
+          <button onclick="handleDrawNumber()" class="btn-generateboard">
             > Draw Number
           </button>
           <div class="numbers-container"></div>
