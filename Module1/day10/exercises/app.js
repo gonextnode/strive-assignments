@@ -21,6 +21,14 @@ console.log(me2)
 let arrayOne = []
 let arrayTwo = []
 
-for (let i = 0; i < 10; i++){
-    
+for (let i = 0; i < 10; i++) {
+  arrayOne.push(`string ${i}`)
 }
+
+for (let i = 0; i < 100; i++) {
+  const random = Math.floor(Math.random() * 100)
+  arrayTwo.push(random)
+}
+
+//console.log(arrayOne)
+console.log(arrayTwo)

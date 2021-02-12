@@ -31,9 +31,9 @@
         ✔ //TODO 21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" @done(21-02-12 14:38)
         ✔ //TODO 22) Create an object with properties such name, surname, email @done(21-02-12 14:39)
         ✔ //TODO 23) Delete Email from the previously created object @done(21-02-12 14:42)
-        ☐ //TODO 24) Create an array with 10 strings in it
-        ☐ //TODO 25) Print in the console every string in the previous array
-        ☐ //TODO 26) Create an array with 100 random numbers in it
+        ✔ //TODO 24) Create an array with 10 strings in it @done(21-02-12 15:30)
+        ✔ //TODO 25) Print in the console every string in the previous array @done(21-02-12 15:30)
+        ✔ //TODO 26) Create an array with 100 random numbers in it @done(21-02-12 15:34)
         ☐ //TODO 27) Wrote a function to get the MAX and the MIN from the previously created array
         ☐ //TODO 28) Create an array of arrays, in which every array has 10 random numbers
         ☐ //TODO 29) Create a function that gets 2 arrays and returns the longest one
