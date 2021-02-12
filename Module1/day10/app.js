@@ -1,1 +1,1 @@
-console.log()
+console.log('connected app.js')
