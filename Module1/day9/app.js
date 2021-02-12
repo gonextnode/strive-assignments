@@ -49,28 +49,27 @@ const drawHistoryComponent = () => {
   document.getElementById('drawnumbers').appendChild(node)
 }
 
-// TODO issues with square numbers not staying within the confines of the board
-
 // boards UI component
 const boardComponent = () => {
+  state.boardsCount += 1
   const board = document.createElement('div')
   board.className = 'board'
-  board.setAttribute('id', 'board')
+  board.setAttribute('id', 'board' + state.boardsCount)
   document.getElementById('boards').appendChild(board)
   for (let i = 0; i < 75; i++) {
     const square = document.createElement('div')
     square.innerText = i + 1
-    document.getElementById('board').appendChild(square)
+    document.getElementById('board' + state.boardsCount).appendChild(square)
     square.className = 'square'
   }
 }
 
 // menu button game control
 const handleGenerateBoard = () => {
-  state.boardsCount = 1
-  for (let i = 0; i < state.boardsCount; i++) {
-    boardComponent()
-  }
+  boardComponent()
+  // for (let i = 0; i < state.boardsCount; i++) {
+  //   // boardComponent()
+  // }
 }
 
 // menu button game control

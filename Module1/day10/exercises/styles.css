@@ -1,0 +1,46 @@
+body {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+p {
+  margin: 25px 5px;
+}
+
+table {
+  border-radius: 0.5rem;
+  border: 0.5px dotted lightblue;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+a {
+  color: purple;
+}
+
+img {
+  max-width: 100px;
+}
+
+td {
+  border: solid 0.5px lightgreen;
+}
+
+tr {
+  border: dotted 0.5px lightcoral;
+}
+
+.section {
+  border: 0.5px dashed lightpink;
+}
+
+.custom-font-styles {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.hide {
+  display: none;
+}

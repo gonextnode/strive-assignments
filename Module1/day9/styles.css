@@ -78,7 +78,7 @@ body {
 .boards-wrapper {
   min-height: 500px;
   padding: 30px;
-  background-image: url('/day9/assets/bingolegends.jfif');
+  background-image: url('/module1/day9/assets/bingolegends.jfif');
   background-repeat: repeat-y;
 }
 
@@ -107,6 +107,7 @@ body {
   background-color: rgba(33, 61, 82, 0.775);
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .square {
