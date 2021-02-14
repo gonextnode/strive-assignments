@@ -1,9 +1,10 @@
 // App State
 const state = {
   drawNumbers: [],
+  boardNumbers: []
   boardsCount: 0,
   boards: [],
-  boardNumbers: []
+
 }
 
 // Generates random numbers between 1 and 75
@@ -52,6 +53,7 @@ const drawHistoryComponent = () => {
 // boards UI component
 const boardComponent = () => {
   state.boardsCount += 1
+  console.log(state.boardsCount)
   const board = document.createElement('div')
   board.className = 'board'
   board.setAttribute('id', 'board' + state.boardsCount)
@@ -67,14 +69,12 @@ const boardComponent = () => {
 // menu button game control
 const handleGenerateBoard = () => {
   boardComponent()
-  // for (let i = 0; i < state.boardsCount; i++) {
-  //   // boardComponent()
-  // }
 }
 
 // menu button game control
 const handleDrawNumber = () => {
   state.drawNumbers.unshift(randomNumbers())
+  console.log(state.drawNumbers)
   drawHistoryComponent()
 }
 
