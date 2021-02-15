@@ -1,41 +1,39 @@
 console.log('connected...')
 
 state = {
-  tableRowsCount: 0
+  tableRowsCount: 0,
+  students = [
+    {
+      id: 'https://www.facebook.com/seanknowlesmd/',
+      name: 'sean',
+      surname: 'knowles',
+      age: 32,
+      email: 'Caroline48@gmail.com'
+    },
+    {
+      id: 'https://www.facebook.com/jackychan/',
+      name: 'jacky',
+      surname: 'chan',
+      age: 72,
+      email: 'Caroline48@gmail.com'
+    },
+    {
+      id: 'https://www.facebook.com/brucelee/',
+      name: 'bruce',
+      surname: 'lee',
+      age: 102,
+      email: 'Caroline48@gmail.com'
+    },
+    {
+      id: 'https://www.facebook.com/jetlee/',
+      name: 'jet',
+      surname: 'lee',
+      age: 56,
+      email: 'Caroline48@gmail.com'
+    }
+  ],
+  columnHeadings = ['ID', 'Name', 'Surname', 'Age', 'Email', 'Actions']
 }
-
-const students = [
-  {
-    id: 'https://www.facebook.com/seanknowlesmd/',
-    name: 'sean',
-    surname: 'knowles',
-    age: 32,
-    email: 'Caroline48@gmail.com'
-  },
-  {
-    id: 'https://www.facebook.com/jackychan/',
-    name: 'jacky',
-    surname: 'chan',
-    age: 72,
-    email: 'Caroline48@gmail.com'
-  },
-  {
-    id: 'https://www.facebook.com/brucelee/',
-    name: 'bruce',
-    surname: 'lee',
-    age: 102,
-    email: 'Caroline48@gmail.com'
-  },
-  {
-    id: 'https://www.facebook.com/jetlee/',
-    name: 'jet',
-    surname: 'lee',
-    age: 56,
-    email: 'Caroline48@gmail.com'
-  }
-]
-
-const columnHeadings = ['ID', 'Name', 'Surname', 'Age', 'Email', 'Actions']
 
 /* 
 - Table component generates all table elements that are child of <table></table>
@@ -66,6 +64,7 @@ tableComponent = (columnHeadings = [], tableData = []) => {
     state.tableRowsCount += 1
     const tr = document.createElement('tr')
     tbody.append(tr)
+    tr.setAttribute('ID', `tableDataRow${i}`)
     Object.values(data).forEach((values) => {
       const td = document.createElement('td')
       tr.appendChild(td).innerText = `${values}`
@@ -73,9 +72,10 @@ tableComponent = (columnHeadings = [], tableData = []) => {
   })
 }
 
+
 // Render function
 window.onload = function render() {
-  tableComponent(columnHeadings, students)
+  tableComponent(state.columnHeadings, state.students)
 
   console.log(state)
 }
