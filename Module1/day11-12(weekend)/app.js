@@ -51,6 +51,7 @@ tableComponent = (columnHeadings = [], tableData = []) => {
   const td = document.createElement('td')
   // target table tag
   const table = document.querySelector('table')
+
   // render tableHeader children elements
   table.appendChild(thead)
   thead.appendChild(tr)
@@ -70,8 +71,6 @@ tableComponent = (columnHeadings = [], tableData = []) => {
       tr.appendChild(td).innerText = `${values}`
     })
   })
-
-  // insert loop <tr><td></td></tr>
 }
 
 // Render function
