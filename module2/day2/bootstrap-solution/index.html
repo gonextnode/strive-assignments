@@ -51,210 +51,224 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <!-- EXERCISE 2 
+  <body class="bg-zig-zag">
+    <main class="main-content container">
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="assets/navlogo.png" />
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="#fave"
+                    >Fave Albums <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#reviews"
+                    >Reviews <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#worst"
+                    >Wall of Shame <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#fan"
+                    >Fan Zone<span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#art"
+                    >Album Art <span class="sr-only">(current)</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </div>
+
+      <!-- EXERCISE 2 
             Implement a navigation bar using the bootstrap component
             This navigation bar must be linked to every section in your page
         -->
-    <main class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-              <img alt="Brand" src="assets/navlogo.png" />
-            </a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div
-            class="collapse navbar-collapse"
-            id="bs-example-navbar-collapse-1"
-          >
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="#"
-                  >Fave Albums <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li>
-                <a href="#">Reviews <span class="sr-only">(current)</span></a>
-              </li>
-              <li>
-                <a href="#"
-                  >Wall of Shame <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li>
-                <a href="#">Fan Zone<span class="sr-only">(current)</span></a>
-              </li>
-              <li>
-                <a href="#">Album Art <span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-      </nav>
-      <section class="favorite-albums container">
-        <h1>Favorite Albums</h1>
-        <hr />
-        <div class="row">
-          <div class="col-sm-3 col-md-3">
-            <div class="thumbnail">
-              <img
-                src="./assets/franky.jpg"
-                alt="frankie goes to hollywood album art"
-              />
-              <div class="caption">
-                <h3>Frankie Goes to Hollywood</h3>
-                <p>
-                  Frankie Goes to Hollywood were a English band formed in
-                  Liverpool, England, in the 1980s. The group was fronted by
-                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
-                  and Brian Nash.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-default" role="button"
-                    >More Info</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="thumbnail">
-              <img
-                src="./assets/indeep.jfif"
-                alt="frankie goes to hollywood album art"
-              />
-              <div class="caption">
-                <h3>Indeep</h3>
-                <p>
-                  Frankie Goes to Hollywood were a English band formed in
-                  Liverpool, England, in the 1980s. The group was fronted by
-                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
-                  and Brian Nash.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-default" role="button"
-                    >More Info</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="thumbnail">
-              <img
-                src="./assets/inxs.jpg"
-                alt="frankie goes to hollywood album art"
-              />
-              <div class="caption">
-                <h3>Frankie Goes to Hollywood</h3>
-                <p>
-                  Frankie Goes to Hollywood were a English band formed in
-                  Liverpool, England, in the 1980s. The group was fronted by
-                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
-                  and Brian Nash.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-default" role="button"
-                    >More Info</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="thumbnail">
-              <img
-                src="./assets/inxs.jpg"
-                alt="frankie goes to hollywood album art"
-              />
-              <div class="caption">
-                <h3>Frankie Goes to Hollywood</h3>
-                <p>
-                  Frankie Goes to Hollywood were a English band formed in
-                  Liverpool, England, in the 1980s. The group was fronted by
-                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
-                  and Brian Nash.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-default" role="button"
-                    >More Info</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- EXERCISE 3
+
             Create a responsive section for your favourite albums.
             In this section you should have:
             - 4 albums per row when the screen is very large
             - 3 albums per row when you are on a tablet (or a smaller window)
             - 2 albums per row when you are on a small screen
         -->
+      <section id="fave" class="favorite-albums container">
+        <h2 class="">Favorite Albums</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="thumbnail h">
+                <img
+                  src="./assets/franky.jpg"
+                  alt="frankie goes to hollywood album art"
+                />
+                <div class="caption">
+                  <h3>Frankie Goes Hollywood</h3>
+                  <p>
+                    Frankie Goes to Hollywood were a English band formed in
+                    Liverpool, England, in the 1980s. The group was fronted by
+                    Holly Johnson, with Paul Rutherford, Peter Gill, Mark
+                    O'Toole and Brian Nash.
+                  </p>
+                  <p>
+                    <a href="#" class="btn btn-default" role="button">Review</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img
+                  src="./assets/indeep.jfif"
+                  alt="frankie goes to hollywood album art"
+                />
+                <div class="caption">
+                  <h3>Indeep</h3>
+                  <p>
+                    Frankie Goes to Hollywood were a English band formed in
+                    Liverpool, England, in the 1980s. The group was fronted by
+                    Holly Johnson, with Paul Rutherford, Peter Gill, Mark
+                    O'Toole and Brian Nash.
+                  </p>
+                  <p>
+                    <a href="#" class="btn btn-default" role="button">Review</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img
+                  src="./assets/inxs.jpg"
+                  alt="frankie goes to hollywood album art"
+                />
+                <div class="caption">
+                  <h3>INXS</h3>
+                  <p>
+                    Frankie Goes to Hollywood were a English band formed in
+                    Liverpool, England, in the 1980s. The group was fronted by
+                    Holly Johnson, with Paul Rutherford, Peter Gill, Mark
+                    O'Toole and Brian Nash.
+                  </p>
+                  <p>
+                    <a href="#" class="btn btn-default" role="button">Review</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img
+                  src="./assets/phill.png"
+                  alt="frankie goes to hollywood album art"
+                />
+                <div class="caption">
+                  <h3>No Jacket Required</h3>
+                  <p>
+                    Frankie Goes to Hollywood were a English band formed in
+                    Liverpool, England, in the 1980s. The group was fronted by
+                    Holly Johnson, with Paul Rutherford, Peter Gill, Mark
+                    O'Toole and Brian Nash.
+                  </p>
+                  <p>
+                    <a href="#" class="btn btn-default" role="button">Review</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- EXERCISE 4
-            Create a section for the album review.
-            Pick one of your fav albums, and create a section with:
-            - Cover
-            - Title
-            - Band
-            - Lenght
-            - Genre
-            - Tracklist
-            - ... And whatever you think it's interesting about it!
-        -->
+              Create a section for the album review.
+              Pick one of your fav albums, and create a section with:
+              - Cover
+              - Title
+              - Band
+              - Lenght
+              - Genre
+              - Tracklist
+              - ... And whatever you think it's interesting about it!
+          -->
+      <section id="reviews" class="favorite-albums container">
+        <h2>Reviews</h2>
+      </section>
 
       <!-- EXERCISE 5
-            Worst album list! Find out the music you don't really like or you find overrated and list it
-            in this "hall of shame" chart!
-        -->
+              Worst album list! Find out the music you don't really like or you find overrated and list it
+              in this "hall of shame" chart!
+          -->
+
+      <section id="worst" class="container">
+        <h2>Wall of Shame</h2>
+      </section>
 
       <!-- EXERCISE 6
-            Do you have any musician / band you admire or you are fan of?
-            This section is dedicated to him / her / them!
-            Feel free to experiment in this part of the page.
-        -->
-
+              Do you have any musician / band you admire or you are fan of?
+              This section is dedicated to him / her / them!
+              Feel free to experiment in this part of the page.
+          -->
+      <section id="fan" class="container">
+        <h2>#1 Fan</h2>
+      </section>
       <!-- EXERCISE 7
-            Just covers!
-            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
-            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
-        -->
+              Just covers!
+              Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+              Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+          -->
 
       <!-- EXERCISE 8
-            Implement a footer with some information / social links
-        -->
+              Implement a footer with some information / social links
+          -->
 
       <!-- EXTRA:
-            EXERCISE 9
-            Create album details that are going to be toggled on and off by clicking on the album image
-        -->
+              EXERCISE 9
+              Create album details that are going to be toggled on and off by clicking on the album image
+          -->
 
       <!-- EXERCISE 10
-            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
-        -->
+              Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+          -->
 
       <!--
+      </div>
+     
             EXERCISE 11
             Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
         -->

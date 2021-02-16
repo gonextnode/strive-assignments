@@ -10,6 +10,10 @@
                   - etc
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -20,35 +24,92 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.4rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin: 4rem;
 }
 
 h3 {
   font-size: 2rem;
+  color: rgb(14, 174, 86);
 }
 
 p {
   font-family: 'MuseoModerno', cursive;
+  margin: 3rem 0;
+}
+
+.bg-zig-zag {
+  position: relative;
+}
+
+.bg-zig-zag::before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(-14.7 -8.4) rotate(-8.4 1409 581) scale(0.937)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='translate(-52.5 21) rotate(-4.2 800 450) scale(0.99)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(-14.7 31.5) rotate(-52.5 401 736) scale(0.99)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(126 12.6) rotate(-3.15 150 345) scale(1.021)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='translate(31.5 -63) rotate(-75.6 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-8.4 -8.4) rotate(-12.6 1400 132) scale(0.895)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-color: rgba(237, 252, 250, 0.234);
+  background-blend-mode: lighten;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.main-content {
+  z-index: 2;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-  margin-top: 50px;
   height: 75px;
+  margin-top: 50px;
+  left: 30px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   font-family: 'MuseoModerno', cursive;
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.3rem;
+  font-weight: 500;
+  z-index: 5;
 }
 
 .navbar-brand > img {
-  width: 120px;
-  margin-top: -45px;
+  width: 125px;
+  margin-top: -50px;
+}
+
+.navbar-nav a:hover {
+  color: #eb0a8d !important;
+}
+
+.thumbnail {
+  border: none;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.09);
+  min-height: 580px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 15px 15px 2px 1px rgba(42, 16, 211, 0.05);
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+section#reviews {
+  height: 900px;
 }
