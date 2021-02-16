@@ -148,14 +148,17 @@ section#reviews {
 }
 
 iframe {
-  padding: 0;
-  margin: 0;
   width: 100%;
   height: 600px;
-  margin: 0;
-  padding: 0;
 }
 
 .card-body {
   padding: 50px;
+}
+
+.wall-image-wrapper img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
