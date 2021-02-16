@@ -1,8 +1,9 @@
-console.log('connected...')
+import { tableComponent } from './components/tableComponent.js'
 
-state = {
+// application state
+const state = {
   tableRowsCount: 0,
-  students = [
+  students: [
     {
       id: 'https://www.facebook.com/seanknowlesmd/',
       name: 'sean',
@@ -32,55 +33,10 @@ state = {
       email: 'Caroline48@gmail.com'
     }
   ],
-  columnHeadings = ['ID', 'Name', 'Surname', 'Age', 'Email', 'Actions']
+  columnHeadings: ['ID', 'Name', 'Surname', 'Age', 'Email', 'Actions']
 }
 
-/* 
-- Table component generates all table elements that are child of <table></table>
-- It accepts two default parameters to populate data when rendering to the dom
-- Designed to keep html template lean, normally i would use a webcomponent
- */
-
-tableComponent = (columnHeadings = [], tableData = []) => {
-  // instantiate elements to be used in render methods
-  const thead = document.createElement('thead')
-  const tr = document.createElement('tr')
-  const tbody = document.createElement('tbody')
-  const td = document.createElement('td')
-  // target table tag
-  const table = document.querySelector('table')
-
-  // render tableHeader children elements
-  table.appendChild(thead)
-  thead.appendChild(tr)
-  columnHeadings.forEach((col) => {
-    const th = document.createElement('th')
-    tr.appendChild(th).innerText = `${col}`
-  })
-
-  // render tableBody children elements
-  table.appendChild(tbody)
-  tableData.forEach((data, i) => {
-    state.tableRowsCount += 1
-    const tr = document.createElement('tr')
-    tbody.append(tr)
-    tr.setAttribute('ID', `tableDataRow${i}`)
-    Object.values(data).forEach((values) => {
-      const td = document.createElement('td')
-      tr.appendChild(td).innerText = `${values}`
-    })
-  })
-}
-
-
-// Render function
-window.onload = function render() {
-  tableComponent(state.columnHeadings, state.students)
-
-  console.log(state)
-}
-
-changeTitle = () => {
+const changeTitle = () => {
   const { value } = document.getElementById('inputText')
   if (value) {
     document.querySelector('h1').innerText = value
@@ -88,3 +44,10 @@ changeTitle = () => {
     alert('Alert text field is empty')
   }
 }
+
+// Render function
+window.onload = function render() {
+  tableComponent(state.columnHeadings, state.students)
+}
+
+console.log(state.tableRowsCount)

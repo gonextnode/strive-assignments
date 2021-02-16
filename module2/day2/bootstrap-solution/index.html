@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and linked to EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&family=Sansita+Swashed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* EXERCISE 1
+                  For all Albums we'd like to have a consistent style.
+                  Create a class for:
+                  - The album container
+                  - The album cover
+                  - The album title
+                  - The album group / singer / dj
+                  - The album genre
+                  - The album duration
+                  - etc
+               */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Sansita Swashed', cursive;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: 'MuseoModerno', cursive;
+      }
+
+      .navbar {
+        margin-top: 50px;
+        height: 75px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+        background-color: white;
+        font-family: 'MuseoModerno', cursive;
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+
+      .navbar-brand > img {
+        width: 120px;
+        margin-top: -45px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+    <main class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="assets/navlogo.png" />
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#"
+                  >Fave Albums <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li>
+                <a href="#">Reviews <span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Wall of Shame <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li>
+                <a href="#">Fan Zone<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a href="#">Album Art <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+      <section class="favorite-albums container">
+        <h1>Favorite Albums</h1>
+        <hr />
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img
+                src="./assets/franky.jpg"
+                alt="frankie goes to hollywood album art"
+              />
+              <div class="caption">
+                <h3>Frankie Goes to Hollywood</h3>
+                <p>
+                  Frankie Goes to Hollywood were a English band formed in
+                  Liverpool, England, in the 1980s. The group was fronted by
+                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
+                  and Brian Nash.
+                </p>
+                <p>
+                  <a href="#" class="btn btn-default" role="button"
+                    >More Info</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img
+                src="./assets/indeep.jfif"
+                alt="frankie goes to hollywood album art"
+              />
+              <div class="caption">
+                <h3>Indeep</h3>
+                <p>
+                  Frankie Goes to Hollywood were a English band formed in
+                  Liverpool, England, in the 1980s. The group was fronted by
+                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
+                  and Brian Nash.
+                </p>
+                <p>
+                  <a href="#" class="btn btn-default" role="button"
+                    >More Info</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img
+                src="./assets/inxs.jpg"
+                alt="frankie goes to hollywood album art"
+              />
+              <div class="caption">
+                <h3>Frankie Goes to Hollywood</h3>
+                <p>
+                  Frankie Goes to Hollywood were a English band formed in
+                  Liverpool, England, in the 1980s. The group was fronted by
+                  Holly Johnson, with Paul Rutherford, Peter Gill, Mark O'Toole
+                  and Brian Nash.
+                </p>
+                <p>
+                  <a href="#" class="btn btn-default" role="button"
+                    >More Info</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+
+      <!-- EXERCISE 4
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+
+      <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+      <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+      <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+      <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+
+      <!-- EXTRA:
+            EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+      <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+      <!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    </main>
+  </body>
+</html>

@@ -20,7 +20,6 @@ console.log(me2)
 
 let arrayOne = []
 let arrayTwo = []
-let matrixArray = []
 
 for (let i = 0; i < 10; i++) {
   arrayOne.push(`string ${i}`)
@@ -40,9 +39,22 @@ const min = Math.min(...arrayTwo)
 console.log(max)
 console.log(min)
 
-for (let i = 0; i < 10; i++) {
-  const random = Math.floor(Math.random() * 10)
-  matrixArray[random, ...matrixArray] = matrixArray
+function createArrayofArrays() {
+  let masterArray = []
+  for (let i = 0; i < 10; i++) {
+    let array = []
+    for (let i = 0; i < 10; i++) {
+      array.push(Math.floor(Math.random() * 100))
+    }
+    masterArray.push(array)
+    console.log(array)
+  }
+  console.log(masterArray)
 }
 
-console.log(matrixArray)
+// for (let i = 0; i < 10; i++) {
+//   const random = Math.floor(Math.random() * 10)
+//   matrixArray = [[random], ...matrixArray]
+// }
+
+createArrayofArrays()
