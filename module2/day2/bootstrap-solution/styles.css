@@ -1,0 +1,54 @@
+/* EXERCISE 1
+                  For all Albums we'd like to have a consistent style.
+                  Create a class for:
+                  - The album container
+                  - The album cover
+                  - The album title
+                  - The album group / singer / dj
+                  - The album genre
+                  - The album duration
+                  - etc
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sansita Swashed', cursive;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: 'MuseoModerno', cursive;
+}
+
+.navbar {
+  margin-top: 50px;
+  height: 75px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: white;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.navbar-brand > img {
+  width: 120px;
+  margin-top: -45px;
+}
