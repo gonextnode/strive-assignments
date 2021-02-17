@@ -1,6 +1,6 @@
-<!-- background: #c8e4f6 -->
-<!-- color: #15025e -->
-<!-- font: brandon -->
+background: #c8e4f6
+color: #15025e
+font: brandon
 
 # **Creating slides with markdown (.md) in Swipe**
 
