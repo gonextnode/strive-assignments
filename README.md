@@ -7,9 +7,10 @@
   <br>
   <br>
 </p>
-<br>
 
 ## Assignments, Homework & Project/Live Demo Repo Links
+
+<br>
 
 ##### Module2-day2 - [Repo Link](https://github.com/gonextnode/strive-module2-day2) | [Live Demo](https://strive-module2-day2.netlify.app/) | Built With: Boostrap5
 
