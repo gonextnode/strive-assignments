@@ -9,7 +9,8 @@
 </p>
 
 #### This is the coursework and homework assignment repository for the entire 6-month journey with Strive School
-
+<br>
+<br>
 ## Assignment & Project Repo Links
 
 ##### Module2-day2 - [Repo Link](https://github.com/gonextnode/strive-module2-day2) | Live Demo [Live Demo Link](https://strive-module2-day2.netlify.app/) | Built With: Boostrap5
