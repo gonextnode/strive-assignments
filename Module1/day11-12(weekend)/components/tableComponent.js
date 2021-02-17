@@ -4,11 +4,7 @@
 - Designed to keep html template lean, normally i would use a web-component
  */
 
-export const state = {
-  tableRowsCount: 0
-}
-
-export const tableComponent = (columnHeadings = [], tableData = []) => {
+ const tableComponent = (columnHeadings = [], tableData = []) => {
   // instantiate elements to be used in render methods
   const thead = document.createElement('thead')
   const tr = document.createElement('tr')
@@ -52,6 +48,7 @@ const addButton = () => {
     li.innerText = row[1].innerText + ' ' + row[2].innerText
     ul.appendChild(li)
     console.log(row)
+    console.log(state)
   })
   return btn
 }

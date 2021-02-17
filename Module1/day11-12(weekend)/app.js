@@ -1,4 +1,4 @@
-import { tableComponent } from './components/tableComponent.js'
+//import { tableComponent } from './components/tableComponent.js'
 
 // application state
 const state = {
