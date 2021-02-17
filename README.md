@@ -13,4 +13,5 @@
 <br>
 
 1. ##### Module2-day2 - [Repo Link](https://github.com/gonextnode/strive-module2-day2) | [Live Demo](https://strive-module2-day2.netlify.app/) | Built With: Boostrap5
+2. ##### Module2-day3 - [Repo Link](https://github.com/gonextnode/strive-module2-day3) | [Live Demo](https://strive-module2-day3.netlify.app/) | Built With: Boostrap5 (pairs programming assignment)
 
