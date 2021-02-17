@@ -1,13 +1,56 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.spacer {
+  height: 150px;
+}
+
+h1,
+h2 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.522);
+  padding: 10px;
+  max-width: 500px;
+}
+
+nav {
+  margin-bottom: 0;
+}
+
 nav a {
   margin: 0 10px;
 }
 
-.card {
-  margin: 10px 20px;
-  width: 200px;
-  height: 550px;
+.jumbotron {
+  margin-top: 0;
   padding: 0;
-  border-radius: 10px !important;
+  cursor: pointer;
+  background-image: url('./assets/jumbatron.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron h2 {
+  padding: 10px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.522);
+  max-width: 500px;
+}
+
+.header-text-wrapper {
+  position: relative;
+  top: 150px;
+  left: 50px;
+}
+
+.card {
+  padding: 0;
   cursor: pointer;
   box-shadow: 10px 10px 2px 1px rgba(217, 217, 218, 0.145);
   transition: all 0.3s ease-out;
