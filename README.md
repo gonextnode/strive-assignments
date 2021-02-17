@@ -30,8 +30,8 @@ To separate your file into slides, all you need to do is add three stars \* \* \
 
 If you want to set a global style for your presentation, we've built in a very simple way to do it. All you need to do is to copy paste the following code in the very beginning of your document, and change the colors to what you want them to be.
 
-    	<!-- background: #ff7b3b -->
-    	<!-- color: #fff -->
+background: #ff7b3b
+color: #fff
 
 To help you get started, we put together a great collection of downloadable "templates" that you can use and see how it works. [Find them here](https://www.swipe.to/markdown).
 
