@@ -8,7 +8,7 @@
   <br>
 </p>
 
-#### This is the coursework and homework assignment repository for the entire 6-month journey with Strive School
+### This is the coursework and homework assignment repository for the entire 6-month journey with Strive School
 <br>
 <br>
 
