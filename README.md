@@ -8,7 +8,7 @@
   <br>
 </p>
 
-## Links to all code repos and live demos :)
+### Links to all project and exercise repos and live demos.
 
 <br>
 
