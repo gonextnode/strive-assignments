@@ -8,7 +8,7 @@
   <br>
 </p>
 
-## Assignments, Homework & Project/Live Demo Repo Links
+## Links to all code repos and live demos :)
 
 <br>
 
