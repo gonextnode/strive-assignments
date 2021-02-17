@@ -1,6 +1,3 @@
-<!-- background: #ffff-->
-<!-- color: ##292929-->
-
 <p align="center">
   <img width="200" src="https://strive.school/assets/strive_logo02.png" alt="strive school logo">
   <br>
