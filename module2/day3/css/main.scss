@@ -1,3 +1,5 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
 body {
   background-color: #f4f4f4;
 }
@@ -30,7 +32,7 @@ nav a {
   margin-top: 0;
   padding: 0;
   cursor: pointer;
-  background-image: url('./assets/jumbatron.jpg');
+  background-image: url('../assets/jumbatron.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
