@@ -1,0 +1,12 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day1-js-exercises.js",
+  "scripts": {
+    "test": "jest --coverage --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

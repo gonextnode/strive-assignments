@@ -8,9 +8,9 @@ const sum = (num1 = 0, num2 = 0) => {
   return num1 + num2
 }
 
-console.log(sum()) // returns 0 / false
-console.log(sum(1, 2)) // returns 3 pass
-console.log(sum(2, 2)) // returns 12 pass
+// console.log(sum()) // returns 0 / false
+// console.log(sum(1, 2)) // returns 3 pass
+// console.log(sum(2, 2)) // returns 12 pass
 
 /*
 2)
@@ -56,9 +56,9 @@ Create a function to find the largest of three given integers.
 */
 
 const largestInt = (num1 = 0, num2 = 0, num3 = 0) => {
-  const nums = [num1, num2, num3]
   // returns highest number passed into function
-  return (max = Math.max(...nums))
+  // n number of arguments
+  return (max = Math.max(...arguments))
 }
 
 // console.log(largestInt(1, 5, 9)) // returns 9 pass
@@ -70,13 +70,19 @@ const largestInt = (num1 = 0, num2 = 0, num3 = 0) => {
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
 
-const range = (num1, num2) => {}
+const twoNumberRange = (num1, num2) => {
+  if ((num1 >= 40 && num1 < 60) || (num2 >= 70 && num2 < 100)) {
+    if ((num2 >= 40 && num2 < 60) || (num1 >= 70 && num1 < 100)) {
+      return
+    }
+  }
+}
 
-range()
+console.log(twoNumberRange(45, 200))
 
 /*
 6) 
-
+ 
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
@@ -157,3 +163,7 @@ this would be "34".
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
 */
+
+module.exports = {
+  sum
+}
